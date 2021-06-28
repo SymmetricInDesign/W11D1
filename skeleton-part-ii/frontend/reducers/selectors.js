@@ -5,3 +5,7 @@ export const selectAllPokemon = (state) => {
 export const selectPokemon = (state, id) => {
   return state.entities.pokemon[id]
 }
+
+export const selectItem = (state, id) => {
+  return state.entities.items[id]
+}

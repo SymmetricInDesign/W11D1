@@ -4,7 +4,6 @@ import {requestPokemon} from '../../actions/pokemon_actions'
 import {selectAllPokemon, selectPokemon} from "../../reducers/selectors"
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
     return ({
         poke: selectPokemon(state, ownProps.match.params.id)
     })

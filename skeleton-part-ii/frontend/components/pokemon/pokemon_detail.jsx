@@ -1,4 +1,6 @@
 import React from 'react'
+import {Route} from 'react-router-dom'
+import ItemDetailContainer from './item_detail_container'
 
 class PokemonDetail extends React.Component {
 
@@ -10,10 +12,11 @@ class PokemonDetail extends React.Component {
         const {poke, items, moves} = this.props
         if (poke){
             return <>
+                <Route path='/pokemon/:pokemonId/items/:itemId' component={ItemDetailContainer}/>
                 <h1>{poke.name}</h1>
                 <h2>{poke.pokeType}</h2>
                 <img src={poke.imageUrl} alt={poke.name} />
-                <h1></h1>
+                <ItemDetailContainer/>
             </>
         }else{
             return null

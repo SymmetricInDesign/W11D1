@@ -10,7 +10,6 @@ const itemsReducer = (state = {}, action) => {
     // debugger
     // const newItems = {[action.items.id]: action.items}
     let newState = Object.assign({}, state, action.items)
-    debugger
     return newState
   default:
     return state;
